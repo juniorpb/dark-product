@@ -226,7 +226,12 @@ body {
     margin: 0 10px;
     border: 5px solid;
     cursor: pointer;
-    transition: .5s;
+    transition: .3s;
+}
+
+.color:hover {
+    transition: .3s;
+    transform: translateY(-5px);
 }
 
 .color[color="blue"] {
@@ -282,6 +287,11 @@ body {
     font-size: 1.1rem;
     font-weight: 500;
     cursor: pointer;
+    transition: .3s;
+}
+
+.size:hover {
+    transform: translateY(-5px);
     transition: .3s;
 }
 
