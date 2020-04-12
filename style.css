@@ -1,5 +1,5 @@
 :root {
-    --primary: #f84848;
+    --primary: #2175f5;
 }
 
 * {
@@ -46,7 +46,7 @@ body {
 
 .gradient {
     position: absolute;
-    width: 0%;
+    width: 100%;
     height: 100%;
     left: 0;
     top: 0;
@@ -55,7 +55,6 @@ body {
 
 .gradient[color="blue"] {
     background-image: linear-gradient(45deg, #0136af, #22abfa);
-    width: 100%;
     z-index: 0;
 }
 
@@ -132,7 +131,6 @@ body {
 
 .info {
     font-size: 11pt;
-    height: 450px;
     width: 50%;
     background-color: #fff;
     z-index: 1;
@@ -196,4 +194,125 @@ body {
 
 .color-container {
     padding: 10px 0;
+}
+
+.colors {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+.color {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin: 0 10px;
+    border: 5px solid;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.color[color="blue"] {
+    background-color: #2175f5;
+    border-color: #2175f5;
+}
+
+.color[color="red"] {
+    background-color: #f84848;
+    border-color: #f84848;
+}
+
+.color[color="green"] {
+    background-color: #29b864;
+    border-color: #29b864;
+}
+
+.color[color="orange"] {
+    background-color: #ff5521;
+    border-color: #ff5521;
+}
+
+.color[color="black"] {
+    background-color: #444;
+    border-color: #444;
+}
+
+.color.active {
+    border-color: #fff;
+    box-shadow: 0 0 10px .5px rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+}
+
+.size-container {
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.sizes {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+.size {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    background-color: #eee;
+    margin: 0 10px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.size.active {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.buy-price {
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.price {
+    color: #333;
+    display: flex;
+    align-items: flex-start;
+}
+
+.price h1 {
+    font-size: 2.1rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.price i {
+    font-size: 1.4rem;
+    margin-right: 1px;
+}
+
+.buy {
+    padding: .7rem 1rem;
+    background-color: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: .5s;
+}
+
+.buy:hover {
+    transform: scale(1.1);
+}
+
+.buy i {
+    margin-right: 1px;
 }
