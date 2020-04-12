@@ -58,6 +58,10 @@ body {
     animation: 1s width ease;
 }
 
+.second {
+    z-index: -1;
+}
+
 @keyframes width {
     from {
         width: 0%;
