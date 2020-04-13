@@ -343,3 +343,118 @@ body {
 .buy i {
     margin-right: 1px;
 }
+
+@media (max-width: 1070px) {
+    .shoe {
+        width: 135%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .card {
+        flex-direction: column;
+        width: 100%;
+        box-shadow: 0 0 35px 1px rgba(0, 0, 0, 0.2);
+    }
+    .card>div {
+        width: 100%;
+        box-shadow: none;
+    }
+    .shoe {
+        width: 100%;
+        transform: rotate(-5deg) translateY(-50%);
+        top: 55%;
+        right: 2%;
+    }
+    .nike {
+        top: 20%;
+        left: 5%;
+    }
+}
+
+@media (max-width: 600px) {
+    .share {
+        width: 40px;
+        height: 40px;
+    }
+    .share i {
+        font-size: 1rem;
+        line-height: 40px;
+    }
+    .logo {
+        width: 70px;
+    }
+}
+
+@media (max-width: 490px) {
+    .nike {
+        font-size: 7rem;
+    }
+    .shoeName div .big {
+        font-size: 1.3rem;
+    }
+    .small {
+        font-size: 1rem;
+    }
+    .new {
+        padding: 2px 6px;
+        font-size: .9rem;
+    }
+    .title {
+        font-size: .9rem;
+    }
+    .text {
+        font-size: .8rem;
+    }
+    .buy {
+        padding: .5rem .8rem;
+        font-size: .8rem;
+    }
+    .price h1 {
+        font-size: 1.5rem;
+    }
+    .price i {
+        font-size: .9rem;
+    }
+    .size {
+        width: 30px;
+        height: 30px;
+        margin: 0 8px;
+        font-size: .9rem;
+        line-height: 30px;
+    }
+    .color {
+        margin: 0 6px;
+        width: 0 20px;
+        width: 20px;
+        height: 20px;
+        border-width: 4px;
+    }
+    .share {
+        width: 35px;
+        height: 35px;
+        top: 10px;
+        right: 10px;
+    }
+    .share i {
+        font-size: .8rem;
+        line-height: 35px;
+    }
+    .logo {
+        width: 60px;
+        top: 10px;
+        left: 10px;
+    }
+    .info {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .buy i {
+        display: none;
+    }
+    .container {
+        padding: 20px;
+    }
+}
