@@ -1,5 +1,9 @@
 :root {
     --primary: #2175f5;
+    --bg: #efefef;
+    --bg-panel: #fff;
+    --color-headings: #0077FF;
+    --color-text: #333333;
 }
 
 * {
@@ -10,7 +14,7 @@
 }
 
 body {
-    background-color: #efefef;
+    background-color: var(--bg);
 }
 
 .container {
@@ -149,7 +153,7 @@ body {
 .info {
     font-size: 11pt;
     width: 50%;
-    background-color: #fff;
+    background-color: var(--bg-panel);
     z-index: 1;
     padding: 35px 40px;
     box-shadow: 15px 0 35px rgba(0, 0, 0, 0.1), 0 -15px 35px rgba(0, 0, 0, 0.1), 0 15px 35px rgba(0, 0, 0, 0.1);
@@ -167,7 +171,7 @@ body {
 .shoeName div .big {
     margin-right: 10px;
     font-size: 2rem;
-    color: #333;
+    color: var(--color-text);
     line-height: 1;
 }
 
@@ -181,7 +185,7 @@ body {
 
 .shoeName .small {
     font-weight: 500;
-    color: #444;
+    color: var(--color-text);
     margin: 3px;
     text-transform: capitalize;
 }
@@ -198,14 +202,14 @@ body {
 }
 
 .title {
-    color: #3a3a3a;
+    color: var(--color-text);
     font-weight: 600;
     font-size: 1.2rem;
     text-transform: uppercase;
 }
 
 .text {
-    color: #555;
+    color: var(--color-text);
     font-size: 17px;
 }
 
@@ -255,8 +259,8 @@ body {
 }
 
 .color[color="black"] {
-    background-color: #444;
-    border-color: #444;
+    background-color: #111;
+    border-color: #111;
 }
 
 .color.active {
@@ -308,7 +312,7 @@ body {
 }
 
 .price {
-    color: #333;
+    color: var(--color-text);
     display: flex;
     align-items: flex-start;
 }
@@ -369,6 +373,9 @@ body {
     .nike {
         top: 20%;
         left: 5%;
+    }
+    .toggle {
+        margin-top: 5px;
     }
 }
 
@@ -457,4 +464,56 @@ body {
     .container {
         padding: 20px;
     }
+}
+
+
+/* Bottom DarkMode */
+
+input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 52px;
+    height: 27px;
+    background: grey;
+    float: right;
+    border-radius: 100px;
+    position: relative;
+}
+
+label::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+input:checked+label {
+    background-color: var(--color-headings);
+}
+
+input:checked+label::after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+label:active:after {
+    width: 45px;
+}
+
+.toggle {
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: -20px;
+    padding-left: 73%;
 }
